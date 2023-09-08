@@ -19,7 +19,7 @@ This is a simple staking application that allows users to stake their tokens and
 1. **Clone the repository**:
 
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/FiroshV/fantom-stake-portal.git
    ```
 
 2. **Navigate to the project directory**:
