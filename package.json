@@ -1,5 +1,5 @@
 {
-  "name": "spearmint",
+  "name": "fantom-stake-portal",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "autoprefixer": "10.4.15",
+    "ethers": "^6.2.3",
     "next": "13.4.19",
     "postcss": "8.4.29",
     "react": "18.2.0",
