@@ -52,7 +52,7 @@ export default function Home() {
     if (timerIntervalRef.current) {
       clearInterval(timerIntervalRef.current);
       timerIntervalRef.current = null;
-      elapsedSecondsRef.current = 0; 
+      elapsedSecondsRef.current = 0;
       setElapsedTime(formatElapsedTime(0));
     }
   };
@@ -115,7 +115,7 @@ export default function Home() {
         }ing failed!`
       );
     } finally {
-      setIsLoading(false); 
+      setIsLoading(false);
     }
   };
 
@@ -136,7 +136,7 @@ export default function Home() {
   }
 
   const blocksPerYearCalc = (blockTimeSeconds) => {
-    const SECONDS_IN_YEAR = 365 * 24 * 60 * 60; 
+    const SECONDS_IN_YEAR = 365 * 24 * 60 * 60;
 
     return SECONDS_IN_YEAR / blockTimeSeconds;
   };
@@ -156,9 +156,9 @@ export default function Home() {
         const totalStakedToken = await contractWithSigner.totalStakedToken();
         const blockTimeSeconds = await getBlockTime();
         const blocksPerYear = BigInt(blocksPerYearCalc(blockTimeSeconds));
-        let calculatedAPR = Number(
-          (blocksPerYear * rewardPerBlock) / totalStakedToken
-        );
+        let calculatedAPR =
+          Number((blocksPerYear * rewardPerBlock * 100n) / totalStakedToken) /
+          100;
         setAPR(calculatedAPR);
       }
     }
